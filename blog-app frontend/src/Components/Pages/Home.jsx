@@ -24,7 +24,7 @@ import Input from "./Input"
   useEffect(() => {
     const fetchWorkouts = async () => {
       try{
-        const response = axios.get('http://localhost:4000/api/workouts')
+        const response = axios.get('https://blogapp-backend-15kn.onrender.com/api/workouts')
         .then((response) => {
           console.log(response.data[0]);
           console.log(response.data[1]);

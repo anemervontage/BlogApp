@@ -14,7 +14,7 @@ export default function Input() {
   };
 
   const handleClick = () => {
-    axios.post('http://localhost:4000/api/workouts', {
+    axios.post('https://blogapp-backend-15kn.onrender.com/api/workouts', {
       title: title,
       author: author,
       blog: blog,
