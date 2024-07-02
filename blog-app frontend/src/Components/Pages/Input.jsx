@@ -22,10 +22,13 @@ export default function Input() {
 
     .then(response => {
       console.log(response.data);
+      window.location.href = '/'
     })
     .catch(error => {
       console.error(error);
     });
+
+  
   };
 
   return (
@@ -64,13 +67,11 @@ export default function Input() {
             required
           />
         </div>
-        <Link to={`/`}>
         {/* Use button inside form to submit */}
         <button className="writeSubmit" type="button" onClick={handleClick}
          disabled={!isFormValid()}>
           Submit
         </button>
-        </Link>
       </form>
     </div>
   );

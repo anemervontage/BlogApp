@@ -63,8 +63,7 @@ import Input from "./Input"
       <div className="posts" >
         {workouts && workouts.map(workout => (
           <div>
-
-
+            
         <Post 
         Title = {workout.author} Author = {workout.title} Blog = {workout.blog}/>
         
