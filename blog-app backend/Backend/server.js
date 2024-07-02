@@ -4,11 +4,12 @@ const workoutRoutes = require('./Routes/workouts')
 const mongoose = require('mongoose')
 const cors = require('cors')
  
-//express app
+//express app initialization
 const app = express()
 app.use(cors())
 
-//middleware
+//middleware function that parses JSON data in the request body 
+// and logs the path and HTTP method of the request to the console 
 app.use(express.json())
 
 app.use((req, res, next) => {
@@ -19,7 +20,7 @@ app.use((req, res, next) => {
 //routes
 app.use('/api/workouts',workoutRoutes)
 
-//coonect to db
+//connect to db using .env file
 mongoose.connect(process.env.MONGO_URI)
     .then(() =>{
         //listen for requests

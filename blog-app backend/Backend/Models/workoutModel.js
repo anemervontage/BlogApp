@@ -2,6 +2,9 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
+
+//Schema for data required by blog: blog title, blog author, and the blog itself.
+
 const workoutSchema = new Schema({
     title: {
         type:String,

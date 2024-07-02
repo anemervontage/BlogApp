@@ -8,19 +8,19 @@ const {
     updateWorkout
 } = require('../Controllers/workoutControllers')
 
-//GET a all workout
+//GET a all workout/blog
 router.get('/', getWorkouts)
 
-//GET a single workout
+//GET a single workout/blog (unused)
 router.get('/:id', getWorkout)
 
-//POST a new workout
+//POST a new workout/blog
 router.post('/', createWorkout)
 
-//DELETE a single workout
+//DELETE a single workout/blog (unused)
 router.delete('/:id', deleteWorkout)
 
-//UPDATE a single workout
+//UPDATE a single workout/blog (unused)
 router.patch('/:id', updateWorkout)
 
 module.exports = router

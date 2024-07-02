@@ -9,17 +9,22 @@ export default function Input() {
   const [author, setAuthor] = useState('');
   const [blog, setBlog] = useState('');
 
+  // Check if forms are filled before submiut button is enabled.
   const isFormValid = () => {
     return title.trim() !== '' && author.trim() !== '' && blog.trim() !== '';
   };
 
+  // Handles when submit button is clicked. Posts data to API before redirecting to home page
   const handleClick = () => {
+
+    //Post to API hosted on Render
     axios.post('https://blogapp-backend-15kn.onrender.com/api/workouts', {
       title: title,
       author: author,
       blog: blog,
     })
 
+    //Log data to terminal and redirect to home.
     .then(response => {
       console.log(response.data);
       window.location.href = '/'
